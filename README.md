@@ -1,59 +1,95 @@
-# EmailApp
+# Email Sender Web Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+A full-stack Email Sender application built using **Angular** for frontend and **Spring Boot** for backend, integrated with SMTP (JavaMailSender) for sending emails.
 
-## Development server
+---
 
-To start a local development server, run:
+## Features
 
-```bash
+- Send emails to any valid email address
+- Responsive UI using Angular
+- Angular Material UI components
+- RESTful API integration with Spring Boot
+- SMTP email sending using JavaMailSender
+- Form validation and error handling
+- Snackbar notifications for success/error messages
+- Secure credential handling using environment variables
+
+---
+
+## Tech Stack
+
+### Frontend:
+- Angular
+- TypeScript
+- Angular Material
+- HTML, CSS
+
+### Backend:
+- Spring Boot
+- Spring Web
+- JavaMailSender (Spring Mail)
+- REST API
+
+---
+
+## Project Structure
+
+```plaintext
+email-app/
+│
+├── backend/        → Spring Boot Backend
+│   ├── src/
+│   ├── pom.xml
+│
+├── src/            → Angular Frontend
+│   ├── app/
+│   ├── assets/
+│
+├── angular.json
+├── package.json
+
+---
+---
+
+## ⚙️ Setup Instructions
+
+1️⃣ Backend Setup (Spring Boot)
+
+- Open backend folder in STS / IDE  
+- Configure `application.properties`:
+
+```properties
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=YOUR_EMAIL
+spring.mail.password=YOUR_APP_PASSWORD
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+Run backend:
+mvn spring-boot:run
+
+2️⃣ Frontend Setup (Angular)
+npm install
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Frontend runs on:
+👉 http://localhost:4200
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+# Key Learnings: 
+Angular + Spring Boot integration
+REST API communication
+SMTP email sending using JavaMailSender
+Handling async operations in Angular
+Secure credential management using environment variables
 
-```bash
-ng generate component component-name
-```
+# Future Enhancements: 
+Email attachments support
+User authentication (OAuth)
+Email templates
+Email history tracking
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Author :
+Developed by Shruti Dalal
