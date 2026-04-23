@@ -34,6 +34,8 @@ A full-stack Email Sender application built using **Angular** for frontend and *
 ---
 
 ## Project Structure
+
+```plaintext
 email-app/
 │
 ├── backend/        → Spring Boot Backend
@@ -47,11 +49,17 @@ email-app/
 ├── angular.json
 ├── package.json
 
+---
+---
 
-## Setup Instructions: 
-1.Backend Setup (Spring Boot)
-Open backend folder in STS/IDE
-Configure application.properties:
+## ⚙️ Setup Instructions
+
+1️⃣ Backend Setup (Spring Boot)
+
+- Open backend folder in STS / IDE  
+- Configure `application.properties`:
+
+```properties
 spring.mail.host=smtp.gmail.com
 spring.mail.port=587
 spring.mail.username=YOUR_EMAIL
@@ -62,27 +70,26 @@ spring.mail.properties.mail.smtp.starttls.enable=true
 Run backend:
 mvn spring-boot:run
 
-2. Frontend Setup (Angular)
+2️⃣ Frontend Setup (Angular)
 npm install
 ng serve
 
 Frontend runs on:
+👉 http://localhost:4200
 
-http://localhost:4200
 
-**Key Learnings**
+# Key Learnings: 
 Angular + Spring Boot integration
 REST API communication
 SMTP email sending using JavaMailSender
 Handling async operations in Angular
 Secure credential management using environment variables
 
-**Future Enhancements**
+# Future Enhancements: 
 Email attachments support
 User authentication (OAuth)
 Email templates
 Email history tracking
 
-
-**Author**
+# Author :
 Developed by Shruti Dalal
