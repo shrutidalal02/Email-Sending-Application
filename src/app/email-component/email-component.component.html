@@ -1,0 +1,40 @@
+
+
+<mat-card style="max-width: 500px; margin: 40px auto; padding: 20px;">
+  <h2>Email Sending Application</h2>
+
+<mat-form-field appearance="outline" style="width: 100%;">
+  <input matInput placeholder="To" [(ngModel)]="email.to" required email>
+</mat-form-field>
+
+<mat-form-field appearance="outline" style="width: 100%;">
+  <input matInput placeholder="Subject" [(ngModel)]="email.subject" required>
+</mat-form-field>
+
+<mat-form-field appearance="outline" style="width: 100%;">
+  <textarea matInput placeholder="Message" [(ngModel)]="email.message" required></textarea>
+</mat-form-field>
+
+<button mat-raised-button color="primary"
+  (click)="send()"
+  [disabled]="!email.to || !email.subject || !email.message">
+  Send Email
+</button>
+
+
+  <!-- <mat-form-field appearance="outline" style="width: 100%;">
+    <input matInput placeholder="To" [(ngModel)]="email.to">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <input matInput placeholder="Subject" [(ngModel)]="email.subject">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <textarea matInput placeholder="Message" [(ngModel)]="email.message"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="send()">
+    Send Email
+  </button> -->
+</mat-card>

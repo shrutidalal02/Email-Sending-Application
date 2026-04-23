@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { EmailComponentComponent } from './email-component/email-component.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [EmailComponentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
