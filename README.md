@@ -48,3 +48,43 @@ email-app/
 │
 ├── angular.json
 ├── package.json
+
+
+## Setup Instructions: 
+1.Backend Setup (Spring Boot)
+Open backend folder in STS/IDE
+Configure application.properties:
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=YOUR_EMAIL
+spring.mail.password=YOUR_APP_PASSWORD
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+Run backend:
+mvn spring-boot:run
+
+2. Frontend Setup (Angular)
+npm install
+ng serve
+
+Frontend runs on:
+
+http://localhost:4200
+
+Key Learnings
+Angular + Spring Boot integration
+REST API communication
+SMTP email sending using JavaMailSender
+Handling async operations in Angular
+Secure credential management using environment variables
+
+Future Enhancements
+Email attachments support
+User authentication (OAuth)
+Email templates
+Email history tracking
+
+
+Author
+Developed by Shruti Dalal
